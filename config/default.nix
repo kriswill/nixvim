@@ -75,9 +75,11 @@
     };
   };
   config = {
-    plugins.comment.enable = true;
-    plugins.which-key.enable = true;
-
+    plugins = {
+      cmp-ai.enable = false;
+      comment.enable = true;
+      which-key.enable = true;
+    };
     # The base16 theme to use, if you want to use another theme, change it in colorscheme.nix
     theme = "default";
     extraConfigLua = ''

@@ -40,6 +40,10 @@
           };
         in
         {
+          # imports = with inputs; [ 
+          #   nixvim.homeManagerModules.nixvim 
+          # ];
+
           checks = {
             default = nixvimLib.check.mkTestDerivationFromNvim {
               inherit nvim;
@@ -56,12 +60,18 @@
 
           formatter = pkgs.nixpkgs-fmt;
 
-          packages.default = nvim;
-
-          devShells = {
-            default = with pkgs;
-              mkShell { inherit (self'.checks.pre-commit-check) shellHook; };
+          packages = {
+            inherit nvim;
+            default = nvim;
           };
+
+          devShells.default = with pkgs; mkShell {
+            inherit (self'.checks.pre-commit-check) shellHook;
+          };
+
+          # flake = {
+          #   homeManagerModules = nixvim.homeManagerModules;
+          # };
         };
     };
 }
