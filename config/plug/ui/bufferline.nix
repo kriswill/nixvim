@@ -4,7 +4,7 @@
     separatorStyle = "thick"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
   };
 
-  plugins.keymaps = [
+  keymaps = [
     {
       mode = "n";
       key = "<S-l>";
