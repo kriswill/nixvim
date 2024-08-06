@@ -1,22 +1,23 @@
-{
+let enabled = { enable = true; };
+in {
   plugins = {
-    lsp-format = { enable = true; };
+    lsp-format = enabled;
     lsp = {
       enable = true;
       servers = {
-        eslint = { enable = true; };
-        html = { enable = true; };
+        eslint = enabled;
+        html = enabled;
         lua-ls = {
           enable = true;
           extraOptions = {
             diagnostics.globals = [ "vim" ];
           };
         };
-        nil-ls = { enable = true; };
-        marksman = { enable = true; };
-        pyright = { enable = true; };
-        gopls = { enable = true; };
-        terraformls = { enable = true; };
+        nil-ls = enabled;
+        marksman = enabled;
+        pyright = enabled;
+        gopls = enabled;
+        terraformls = enabled;
         tsserver = { enable = false; };
         yamlls = {
           enable = true;
