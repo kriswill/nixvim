@@ -5,7 +5,7 @@
   imports = [
     # ./autocommands.nix
     ./keys.nix
-    ./sets.nix
+    ./options.nix
     # ./highlight.nix
 
     # ./plug/colorscheme/biscuit.nix
@@ -18,7 +18,7 @@
 
     # ./plug/git/gitlinker.nix
     # ./plug/git/gitsigns.nix
-    # ./plug/git/lazygit.nix
+    ./plug/lazygit.nix
     # ./plug/git/worktree.nix
 
     ./plug/lsp/conform.nix
