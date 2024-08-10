@@ -19,9 +19,7 @@ in {
         gopls = enabled;
         terraformls = enabled;
         tsserver = { enable = false; };
-        yamlls = {
-          enable = true;
-        };
+        yamlls = enabled;
       };
       keymaps = {
         silent = true;
@@ -76,7 +74,7 @@ in {
       };
     };
   };
-  extraConfigLua = ''
+  extraConfigLua = /*lua*/''
     local _border = "rounded"
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
