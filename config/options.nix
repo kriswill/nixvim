@@ -48,9 +48,9 @@
       # Enable persistent undo history
       swapfile = false;
       backup = false;
-      undodir = /*lua*/''
-        os.getenv('HOME') .. '/.local/nvim/undodir'
-      '';
+      # undodir = /*lua*/''
+      #   os.getenv('HOME') .. '/.local/nvim/undodir'
+      # '';
       undofile = true;
 
       # Enable 24-bit colors
