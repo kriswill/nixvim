@@ -7,18 +7,18 @@ in {
       servers = {
         eslint = enabled;
         html = enabled;
-        lua-ls = {
+        lua_ls = {
           enable = true;
           extraOptions = {
             diagnostics.globals = [ "vim" ];
           };
         };
-        nil-ls = enabled;
+        nil_ls = enabled;
         marksman = enabled;
         pyright = enabled;
         gopls = enabled;
         terraformls = enabled;
-        tsserver = { enable = false; };
+        ts_ls = { enable = false; };
         yamlls = enabled;
       };
       keymaps = {
